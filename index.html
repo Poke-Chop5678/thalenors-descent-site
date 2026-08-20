@@ -16,21 +16,23 @@
 	<a class="skip-link" href="#main">Skip to content</a>
 
 	<header class="site-header">
-		<div class="site-header__inner">
-			<a class="brand" href="#top" aria-label="Thalenor's Descent home">
+		<div class="wrap site-header__inner">
+			<a class="brand" href="index.html" aria-label="Thalenor's Descent home">
 				<img src="assets/images/logo.png" alt="Thalenor's Descent" width="220" height="80" decoding="async">
 			</a>
 			<nav class="site-nav" aria-label="Primary">
-				<a href="#the-game">The Game</a>
-				<a href="#screenshots">Screenshots</a>
-				<a href="#lore">Lore</a>
+				<a href="index.html" aria-current="page">Home</a>
+				<a href="how-to-play.html">How to Play</a>
+				<a href="hints.html">Hints</a>
+				<a href="updates.html">Updates</a>
+				<a href="about.html">About</a>
 				<a class="nav-cta" href="https://store.steampowered.com/app/4846410/" rel="noopener noreferrer">Wishlist</a>
 			</nav>
 		</div>
 	</header>
 
 	<main id="main">
-		<section id="top" class="hero" aria-labelledby="hero-heading">
+		<section class="hero" aria-labelledby="hero-heading">
 			<img
 				class="hero__art"
 				src="assets/images/header-capsule.png"
@@ -41,7 +43,7 @@
 				fetchpriority="high"
 			>
 			<div class="hero__shade" aria-hidden="true"></div>
-			<div class="hero__content">
+			<div class="wrap hero__content">
 				<p class="kicker">Coming to Steam</p>
 				<h1 id="hero-heading">Tournament of Heroes</h1>
 				<p class="lede">
@@ -52,109 +54,105 @@
 					<a class="btn primary" href="https://store.steampowered.com/app/4846410/" rel="noopener noreferrer">
 						Wishlist on Steam
 					</a>
-					<a class="btn ghost" href="#the-game">Explore the descent</a>
+					<a class="btn ghost" href="how-to-play.html">How to play</a>
 				</div>
 			</div>
 		</section>
 
-		<section id="the-game" class="panel showcase">
-			<div class="showcase__copy">
-				<h2>Descend into the Void</h2>
-				<p>
-					Thalenor's Descent is a party-based dungeon descent on a living board. Each round the maze
-					breathes — invasions, shops, forges, sealed branches, and trials that break careless heroes.
-				</p>
-				<p>
-					Prep your company, commit to Battle, Rest, or Search, then clash with a full hand of four
-					battle cards. Unlock the Boss Gate, defeat Malakor, and bring the realms home.
-				</p>
-			</div>
-			<figure class="showcase__figure">
-				<img
-					src="assets/images/gameplay-board.png"
-					alt="Isometric view of a dungeon board with heroes, a forge, rune circle, and portal rooms"
-					width="1920"
-					height="620"
-					loading="lazy"
-					decoding="async"
-				>
-				<figcaption>A living labyrinth — rooms, forges, runes, and rifts on every descent.</figcaption>
-			</figure>
-		</section>
-
-		<section class="panel features" aria-labelledby="features-heading">
-			<h2 id="features-heading">How you survive</h2>
-			<ul class="feature-grid">
-				<li class="feature-card">
-					<h3>A living dungeon</h3>
-					<p>Invasions reshape the board each round. Shops, forges, and sealed branches turn every tournament into a new maze.</p>
-				</li>
-				<li class="feature-card">
-					<h3>Card battles, full hand</h3>
-					<p>Every hero keeps four battle cards — replace, never empty. Direction, clash, and the card you play decide the blow.</p>
-				</li>
-				<li class="feature-card">
-					<h3>A party from four realms</h3>
-					<p>Build a company, spend Prep wisely, and protect shared party lives. Zero lives ends the run.</p>
-				</li>
-				<li class="feature-card">
-					<h3>Play together</h3>
-					<p>Steam lobbies for co-op descent. Host, invite friends, or share a join link — then face the same Void.</p>
-				</li>
-			</ul>
-		</section>
-
-		<section id="screenshots" class="panel gallery" aria-labelledby="gallery-heading">
-			<div class="gallery__intro">
-				<h2 id="gallery-heading">Meet the company</h2>
-				<p>Rogue, ranger, knight, and wizard — summoned to Malakor's tournament beneath a broken sky.</p>
-			</div>
-			<div class="gallery__grid">
-				<figure class="gallery__item gallery__item--wide">
+		<section class="panel">
+			<div class="wrap showcase">
+				<div class="showcase__copy">
+					<h2>Descend into the Void</h2>
+					<p>
+						Thalenor's Descent is a party-based dungeon descent on a living board. Each round the maze
+						breathes — invasions, shops, forges, sealed branches, and trials that break careless heroes.
+					</p>
+					<p>
+						Prep your company, commit to Battle, Rest, or Search, then clash with a full hand of four
+						battle cards. Unlock the Boss Gate, defeat Malakor, and bring the realms home.
+					</p>
+				</div>
+				<figure class="showcase__figure">
 					<img
-						src="assets/images/main-capsule.png"
-						alt="Four fantasy heroes standing before a ruined castle under storm clouds"
-						width="1232"
-						height="706"
-						loading="lazy"
-						decoding="async"
-					>
-				</figure>
-				<figure class="gallery__item">
-					<img
-						src="assets/images/vertical-capsule.png"
-						alt="Vertical party portrait with the Thalenor's Descent title"
-						width="748"
-						height="896"
-						loading="lazy"
-						decoding="async"
-					>
-				</figure>
-				<figure class="gallery__item">
-					<img
-						src="assets/images/vertical-library.png"
-						alt="Library artwork of the hero party above swirling void energy"
-						width="748"
-						height="896"
-						loading="lazy"
-						decoding="async"
-					>
-				</figure>
-				<figure class="gallery__item gallery__item--wide">
-					<img
-						src="assets/images/hero-banner.png"
-						alt="Wide banner of the hero party in a gothic landscape"
+						src="assets/images/gameplay-board.png"
+						alt="Isometric view of a dungeon board with heroes, a forge, rune circle, and portal rooms"
 						width="1920"
 						height="620"
 						loading="lazy"
 						decoding="async"
 					>
+					<figcaption>A living labyrinth — rooms, forges, runes, and rifts on every descent.</figcaption>
 				</figure>
 			</div>
 		</section>
 
-		<section id="lore" class="panel lore">
-			<div class="lore__inner">
+		<section class="panel">
+			<div class="wrap">
+				<h2>How you survive</h2>
+				<ul class="feature-grid">
+					<li class="feature-card">
+						<h3>A living dungeon</h3>
+						<p>Invasions reshape the board each round. Shops, forges, and sealed branches turn every tournament into a new maze.</p>
+					</li>
+					<li class="feature-card">
+						<h3>Card battles, full hand</h3>
+						<p>Every hero keeps four battle cards — replace, never empty. Direction, clash, and the card you play decide the blow.</p>
+					</li>
+					<li class="feature-card">
+						<h3>A party from four realms</h3>
+						<p>Build a company, spend Prep wisely, and protect shared party lives. Zero lives ends the run.</p>
+					</li>
+					<li class="feature-card">
+						<h3>Play together</h3>
+						<p>Steam lobbies for co-op descent. Host, invite friends, or share a join link — then face the same Void.</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="panel">
+			<div class="wrap">
+				<div class="gallery__intro">
+					<h2>Meet the company</h2>
+					<p>Rogue, ranger, knight, and wizard — summoned to Malakor's tournament beneath a broken sky.</p>
+				</div>
+				<div class="gallery__grid">
+					<figure class="gallery__item">
+						<img
+							src="assets/images/main-capsule.png"
+							alt="Four fantasy heroes standing before a ruined castle under storm clouds"
+							width="1232"
+							height="706"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
+					<figure class="gallery__item gallery__item--tall">
+						<img
+							src="assets/images/vertical-capsule.png"
+							alt="Vertical party portrait with the Thalenor's Descent title"
+							width="748"
+							height="896"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
+					<figure class="gallery__item">
+						<img
+							src="assets/images/hero-banner.png"
+							alt="Wide banner of the hero party in a gothic landscape"
+							width="1920"
+							height="620"
+							loading="lazy"
+							decoding="async"
+						>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="panel">
+			<div class="wrap lore-block">
 				<h2>The Void</h2>
 				<p>
 					It began in the East, in the great kingdom of Thalenor. For an age the King and his advisor Malakor of Shadowfen
@@ -164,8 +162,8 @@
 					Peace did not last. A rift opened in Shadowfen. Malakor returned, and issued a cruel decree:
 					the greatest heroes would face his trials until the realms themselves broke.
 				</p>
-				<p class="lore__close">Find the Boss Gate. Defeat Malakor. Bring the realms home.</p>
-				<a class="btn primary lore__cta" href="https://store.steampowered.com/app/4846410/" rel="noopener noreferrer">
+				<p class="close">Find the Boss Gate. Defeat Malakor. Bring the realms home.</p>
+				<a class="btn primary" href="https://store.steampowered.com/app/4846410/" rel="noopener noreferrer">
 					Wishlist on Steam
 				</a>
 			</div>
@@ -174,6 +172,13 @@
 
 	<footer class="site-footer">
 		<img class="site-footer__mark" src="assets/images/small-capsule.png" alt="" width="460" height="215" loading="lazy" decoding="async">
+		<nav aria-label="Footer">
+			<a href="index.html">Home</a>
+			<a href="how-to-play.html">How to Play</a>
+			<a href="hints.html">Hints</a>
+			<a href="updates.html">Updates</a>
+			<a href="about.html">About</a>
+		</nav>
 		<p>Thalenor's Descent — Tournament of Heroes</p>
 		<p class="fine">Landing page for the Steam release. Store listing may still be hidden until launch.</p>
 	</footer>
