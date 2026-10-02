@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rulebook — Thalenor&#x27;s Descent</title>
+	<meta name="description" content="Full players rulebook for Thalenor&#x27;s Descent — the single source of truth for gameplay rules.">
+	<link rel="icon" href="assets/images/icon.png" type="image/png">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap site-header__inner">
+			<a class="brand" href="index.html" aria-label="Thalenor's Descent home">
+				<img src="assets/images/logo.png" alt="Thalenor's Descent" width="220" height="80" decoding="async">
+			</a>
+
+			<nav class="site-nav" aria-label="Primary">
+				<a href="index.html">Home</a>
+				<details class="nav-group" open>
+					<summary aria-current="page">Guides</summary>
+					<div class="nav-group__menu">
+						<a href="how-to-play.html">How to Play</a>
+						<a href="quickstart.html">Quickstart</a>
+						<a href="rulebook.html" aria-current="page">Rulebook</a>
+						<a href="hints.html">Hints</a>
+					</div>
+				</details>
+				<a href="updates.html">Updates</a>
+				<a href="about.html">About</a>
+				<a class="nav-cta" href="https://store.steampowered.com/app/4846410/" rel="noopener noreferrer">Wishlist</a>
+			</nav>
+
+		</div>
+	</header>
+
+	<main id="main">
+		<div class="wrap page-hero">
+			<p class="kicker">Full rules</p>
+			<h1>Players Rulebook</h1>
+			<p>Authoritative rules for the current build. For a shorter on-ramp, see the <a href="quickstart.html">Quickstart</a>.</p>
+			<p class="doc-actions"><a class="btn ghost" href="docs/PLAYERS_RULEBOOK.txt" download>Download PLAYERS_RULEBOOK.txt</a></p>
+		</div>
+		<div class="wrap doc-page">
+			<article class="doc-article">
+<p>This document describes the rules players need to know. Keep it aligned with in-game behavior. For a short on-ramp, see PLAYER_GUIDE.txt.</p>
+<h2>1. OVERVIEW: RUNS, WINNING, AND LOSING</h2>
+<h3>WHAT YOU PLAY</h3>
+<ul>
+<li>A run is one play session with your party of four realm champions.</li>
+<li><strong>Entry</strong>: Create New Party or Saved Parties → Enter the Void → Void Lobby. Void Lobby is the hub for every run (not a separate “custom” or “campaign” mode). Set Play Style, world size, difficulty, and Game Rules, then Start New Run, Continue Run, or Multiplayer.</li>
+<li>Play Style (equal peers):<ul><li><strong>Explore</strong> — procedural living labyrinth; clear quests and defeat Malakor.</li><li><strong>Defend</strong> — wave arena around a center vortex; clear waves for Journey Points and push deeper. World size is How to Play + Small only.</li></ul></li>
+<li><strong>Tutorial run</strong>: How to Play on the Void Lobby size path — ephemeral, no save slot.</li>
+<li>Game Rules / difficulty presets change starting rules for a run. They are not separate game modes. Build a Labyrinth is Coming Soon and is not offered in Void Lobby.</li>
+</ul>
+<h3>CLASSES AND REALMS</h3>
+<ul>
+<li><strong>Realms</strong>: Frostfall, Dustveil, Everglade, Shadowfen.</li>
+<li><strong>Classes (Choose Your Heroes)</strong>: Crusader, Reaper, Strider, Occultist. Starting vitality, deck kits, and class specialty attacks follow the class you pick, not the realm slot alone.</li>
+</ul>
+<h3>VICTORY</h3>
+<ul>
+<li><strong>Explore</strong>: win a tournament when living enemies are cleared and the tournament boss (Malakor) is defeated. Reach Malakor via Spawner artifacts, completed side quests, and gathering at the Boss Gate (see §12).</li>
+<li><strong>Defend</strong>: clear each wave’s roster (regulars + disciple pack). Vortex leaks remove that enemy from the roster but cost a party life. Wave Complete grants Journey Points, gems, forge tokens, and +1 party life, then the board reshuffles for the next wave. There is no Malakor Boss Gate win condition in Defend — survival and Journey Points are the run score.</li>
+<li>After an Explore win, return to Void Lobby / saved party flow for the next run setup.</li>
+</ul>
+<h3>DEFEAT</h3>
+<ul>
+<li>Game Over when party lives reach 0 (&quot;The party has run out of lives!&quot;).</li>
+<li>Being wiped by Malakor (Explore) can also end the run.</li>
+</ul>
+<h3>PARTY LIVES</h3>
+<ul>
+<li>Starting lives depend on difficulty and Play Style (top bar). Explore presets: Easy 7, Normal 5, Hard 5, Nightmare 3. Defend overlays start at 4 on every difficulty. Game Rules / rewards can raise this.</li>
+<li><strong>Lose 1 party life when</strong>: (1) A hero is reduced to 0 vitality in battle. (2) Explore: living enemies exceed the board enemy cap at round start (overrun — see Enemies), if overrun is enabled for that difficulty. (3) Defend: an enemy reaches the center vortex (leak).</li>
+<li>When party lives reach 0, the run ends in defeat.</li>
+</ul>
+<h2>2. GAME FLOW: PHASES AND ROUNDS</h2>
+<h3>PHASES (in order during a round)</h3>
+<ol>
+<li><strong>Invasion</strong> — Round start: titles; defeated heroes respawn (round 2+); enemies move; new enemies / spawners (newly summoned enemies also move after a short beat); timed pickups and hazards expire or appear (round 2+).</li>
+<li><strong>Prep</strong> — Selection. For each hero: optionally place Holding cards, then choose Battle, Rest, or Search. If Battle, choose a destination.</li>
+<li><strong>Hero Movement</strong> — Heroes who chose Battle move to their destinations. Pickups and floor effects apply on the path / landing.</li>
+<li><strong>Execution</strong> — Battles resolve in every room that has at least one hero and at least one enemy.</li>
+<li><strong>PostBattle</strong> — After each battle: summary, then loot for participants.</li>
+<li><strong>Cleanup</strong> — Round advances; then the next Invasion begins.</li>
+</ol>
+<h3>ROUNDS AND TOURNAMENTS</h3>
+<ul>
+<li>A tournament continues until you meet the victory conditions (or lose). There is no fixed “round N then boss appears” timer driving the win.</li>
+<li><strong>Round 1</strong>: Heroes and enemies are summoned; maze walls rise; Prep begins.</li>
+<li><strong>Round 2+</strong>: Defeated heroes respawn within the party tether (&quot;A Hero is Reborn&quot;) with vitality restored from their meta/equipment baseline. Living heroes keep their current vitality — it does not fully reset each round.</li>
+<li><strong>New tournament</strong>: vitality returns to the party’s meta baseline for that tournament start.</li>
+</ul>
+<h2>3. BOARD AND GRID</h2>
+<h3>ROOMS (6×6)</h3>
+<ul>
+<li>The board is divided into rooms (e.g. 36 in a full layout).</li>
+<li>Each room has four pawn squares (2×2 on the 12×12 grid) and can hold up to 4 pawns (heroes + enemies combined).</li>
+<li>Movement and range are measured in pawn squares on the 12×12 grid.</li>
+</ul>
+<h3>REALMS</h3>
+<ul>
+<li><strong>Four home realms</strong>: Frostfall, Dustveil, Everglade, Shadowfen.</li>
+<li>Realms matter for home floors, search rooms, enemy homes, and some perks.</li>
+</ul>
+<h3>BATTLES</h3>
+<ul>
+<li>A battle occurs in a room if and only if that room has ≥1 hero and ≥1 enemy after hero movement. Battles resolve one room at a time.</li>
+</ul>
+<h2>4. SELECTION PHASE (PREP)</h2>
+<h3>TURN ORDER</h3>
+<ul>
+<li>Heroes act in fixed Prep order (Hero 1 → 2 → 3 → 4: Frostfall, Dustveil, Everglade, Shadowfen). Finish the highlighted hero before the next.</li>
+<li>Battle-hand strip (left to right for whoever is in the fight): Frostfall, Shadowfen, Dustveil, Everglade.</li>
+</ul>
+<h3>PER-HERO TASKS</h3>
+<ol>
+<li>Place / Prepare (optional)<ul><li><strong>Round 1 checklist</strong>: &quot;Place New Card&quot;. Round 2+: &quot;Prepare Hero&quot;.</li><li>New cards sit in Holding. You may place or discard them (if allowed) before choosing an action. Empty Holding does not block Prep.</li></ul></li>
+<li>Choose an action<ul><li><strong>Battle</strong> — Pick a destination pawn square within range (see Hero Movement). The hero will fight if enemies share that room after moves. You can use Move + click a gold square, or drag the hero pawn.</li><li><strong>Rest</strong> — Stay put; do not fight this round. Only allowed on certain floors (see below). Home Floor and Camp can allow a stronger rest (&quot;Rest Again&quot; / double idle-rest vitality).</li><li><strong>Search</strong> — Dig the current pawn square on that hero’s home-realm search room (when available). Can yield gems, Barrier Runes, and other finds; may yield realm fragments when Realm Rifts are not diverting fragment recovery to a rift sigil. Digging the last unsearched square of a Hidden Chamber entrance reveals that chamber. Marks the square as searched.</li><li><strong>Pass</strong> — If a hero cannot Rest and cannot usefully Move, they may Pass. Two-way Path, Rotating Path, and Laser Rooms offer Pass instead of Rest.</li></ul></li>
+<li>Shop / Forge (does not replace your action)<ul><li>While standing on a Shop Floor or Forge Floor, open that hero’s Shop or Forge from the game menu / inventory tabs.</li><li><strong>Shop</strong>: spend gems on offers; Shop → Sell sells the Holding top card (~40% of buy price). Forge: spend forge points to upgrade deck cards. Using them does not replace Battle / Rest / Search.</li></ul></li>
+</ol>
+<h3>REST — WHERE IT IS ALLOWED (default)</h3>
+<ul>
+<li>Search rooms, staircases (including locked doors), and sigil rooms.</li>
+<li><strong>Special floors</strong>: Home Floor, Camp, Shop Floor, Forge Floor.</li>
+<li>Two-way Path, Rotating Path, and Laser Rooms do not allow Rest; idle Pass once on that tile, then you must move.</li>
+<li>Bugs Floor does not allow Rest.</li>
+</ul>
+<h3>RESTRICTED RESTING (optional Game Rules toggle)</h3>
+<ul>
+<li><strong>When ON</strong>: Rest only on Home, Camp, Forge, Shop, and that hero’s own-realm search room. Other-realm search rooms, stairs, sigil rooms, and all other floors block Rest. When OFF, use the default allowlist above.</li>
+</ul>
+<h3>WHEN ALL HEROES HAVE ACTED</h3>
+<ul>
+<li>The game goes to Hero Movement, then Execution if any battles exist.</li>
+</ul>
+<h2>5. HERO MOVEMENT</h2>
+<h3>MOVEMENT RANGE</h3>
+<ul>
+<li><strong>Starting prep ranges (pawn squares)</strong>: Hasmere 2, Soren 2, Elowen 3, Mordane 3. Cards, orbs, and unlocks can raise range (capped at 8).</li>
+<li>Range is path length from the hero’s current pawn square.</li>
+</ul>
+<h3>VOID CRACKS AND RANGE</h3>
+<ul>
+<li>Range does not extend past a void crack. You may land on the crack itself (to clear it). Alternate paths around the crack remain valid.</li>
+</ul>
+<h3>BLOCKED PAWN SQUARES</h3>
+<ul>
+<li>Cannot enter a square occupied by another hero or enemy.</li>
+<li>Cannot enter a crystal-blocked square.</li>
+<li>Cannot enter a room that already has 4 pawns.</li>
+</ul>
+<h3>PARTY TETHER</h3>
+<ul>
+<li>Every hero must stay within 3 playable rooms of every other hero (shortest path through open passages; same room = 0).</li>
+<li>Gold highlights omit tether-blocked destinations. Thick yellow border lines show where the tether ends. Resting heroes still count as anchors; heroes who already chose Battle count from their destination.</li>
+<li>Defeated heroes respawn within the tether. New enemies spawn only in rooms within the tether of living heroes.</li>
+</ul>
+<h3>MOVEMENT ORDER</h3>
+<ul>
+<li>Battle heroes move one after another in turn order along the grid.</li>
+<li>When you pick a destination, the path taken prefers routes that avoid Thorns / Frozen / Lava pawn squares and lit Laser lanes when a safer path exists within that hero’s move range.</li>
+</ul>
+<h3>EFFECTS ON LANDING / PATH</h3>
+<ul>
+<li><strong>Orb</strong>: permanent orb buff (e.g. movement); pedestal removed.</li>
+<li><strong>Card pedestal</strong>: tier-1 card → that hero’s Holding; pedestal removed.</li>
+<li><strong>Sigils / looters</strong>: permanent or tournament bonuses (stats, lives, forge, gems, keys, etc.) depending on the sigil.</li>
+<li><strong>Void crack: crossing or landing applies void injury</strong> — about 25% of the hero’s base max vitality as a temporary vitality penalty until after the next battle for participants. Landing clears the crack.</li>
+<li><strong>Thorns Floor</strong>: −1 vitality per pawn square stepped on or landed on (heroes only).</li>
+<li><strong>Frozen Floor</strong>: −2 vitality per pawn square stepped on or landed on (heroes only).</li>
+<li><strong>Lava Floor</strong>: −3 vitality per pawn square stepped on or landed on (heroes only).</li>
+<li><strong>Teleport</strong>: if all four heroes stand in a teleport room, the party teleports together to the paired room. Partial parties do not teleport.</li>
+</ul>
+<h3>SPECIAL FLOORS (SUMMARY)</h3>
+<ul>
+<li><strong>Home Floor / Camp</strong> — Rest allowed; stronger idle rest.</li>
+<li><strong>Shop Floor / Forge Floor</strong> — Rest allowed; open Shop / Forge.</li>
+<li><strong>Sludge Floor</strong> — Prep moves through sludge capped to 1 pawn step.</li>
+<li><strong>Sprint Floor</strong> — ×2 move range while using it.</li>
+<li><strong>Void Fissure</strong> — −10% Focus on attack cards while on it.</li>
+<li><strong>Magma Fissure</strong> — −10% Attack on attack cards while on it.</li>
+<li><strong>Quick Sand</strong> — Fatal after 5 rounds standing there; respawn never lands back on Quick Sand.</li>
+<li><strong>Bugs Floor</strong> — No Rest; battle Focus locked to 50 (potions still apply).</li>
+<li><strong>Thorns / Frozen / Lava</strong> — Contact damage per pawn square (heroes only; −1 / −2 / −3).</li>
+<li><strong>Two-way Path / Rotating Path / Laser Room</strong> — Corridor puzzle rooms. Heroes must land in a puzzle room before leaving it. Idle Pass is allowed once per stay (no Rest), then you must move. Rotating Path turns 90° each round from round 2 (CW or CCW per room). Two-way Path flips lanes and art every other round or every two rounds (rolled per room). Laser Rooms (dungeons only): wall-to-wall half-room beams cycle on/off by color-coded variant; crossing or standing on a lit beam costs heroes 25% current vitality (enemies ignore Laser, Thorns, Frozen, and Lava).</li>
+<li><strong>Barrier Room</strong> — Mid-corridor seal into a maze branch; clear with the matching Barrier Rune (see §11). Surface only.</li>
+<li><strong>Boss Gate / Spawner Room</strong> — Malakor access / enemy spawner rooms.</li>
+<li><strong>Summon Room</strong> — Deepest-floor alcove for rift fragments / disciple glyphs; after collect, becomes a Surface Staircase exit.</li>
+<li><strong>Surface Staircase / Malakor vortex</strong> — Gather the full party to return to Surface (or enter Malakor’s lair from the vortex).</li>
+<li><strong>Hidden Chamber entrance</strong> — Search-room entrance to a side board (see §12).</li>
+<li><strong>Empty Floor</strong> — Has no special attributes.</li>
+</ul>
+<h2>6. BATTLE (EXECUTION)</h2>
+<h3>WHEN BATTLE STARTS</h3>
+<ul>
+<li>After hero movement, every room with ≥1 hero and ≥1 enemy battles. Battles resolve in sequence; the camera may follow each one.</li>
+</ul>
+<h3>BATTLE TURN ORDER (within one room)</h3>
+<ul>
+<li><strong>Hero phase</strong>: each living hero in the room may act once per battle round (Attack, Block, Heal, or other battle card). Order among heroes can be randomized at battle start. Target by dragging a card onto an enemy, or double-click to repeat / default target.</li>
+<li><strong>Enemy phase</strong>: each living enemy attacks once (typically the hero who last hit them, or another living hero).</li>
+<li>Repeat until all enemies are defeated (victory) or all heroes in the room are defeated (defeat: 1 party life per defeated hero).</li>
+</ul>
+<h3>TARGETING</h3>
+<ul>
+<li>Attack an enemy in the same room. Default double-click target is the living enemy with the highest attack (tie-break: first in list).</li>
+</ul>
+<h3>BATTLE HAND</h3>
+<ul>
+<li>Exactly 4 cards at all times. Replace a card to change a slot; you cannot leave an empty battle slot.</li>
+<li>At most one Heal and one Block among those four.</li>
+</ul>
+<h3>HEAL CARDS</h3>
+<ul>
+<li><strong>No clash</strong> — no d100 rolls and no damage exchange for that action.</li>
+<li>The acting hero regains vitality equal to the Heal card’s heal/vitality value (capped by max vitality). The card stays until replaced.</li>
+<li>Party Heal (party level 23 unlock): same no-clash play, but every living hero in that battle recovers the card’s heal amount (rolled from 70% of the hero’s deck power points).</li>
+</ul>
+<h3>BLOCK CARDS</h3>
+<ul>
+<li><strong>Block stance</strong>: the hero does not roll to hit; the enemy rolls to hit. Block value reduces incoming damage after enemy crit. Swing direction is ignored for Block.</li>
+</ul>
+<h3>VICTORY ON A ROOM</h3>
+<ul>
+<li>All enemies at ≤0 vitality → battle won → loot choice for participants. Void-crack injury clears for heroes who fought there.</li>
+</ul>
+<h3>DEFEAT ON A ROOM</h3>
+<ul>
+<li>All heroes at 0 vitality → lose 1 party life per defeated hero; those heroes leave the board and respawn at the next Invasion.</li>
+</ul>
+<h2>7. COMBAT: CLASH RESOLUTION</h2>
+<p>Applies when the hero uses an Attack (or similar strike) card. Heal does not clash. Block uses the Block rules in §6.</p>
+<p>Each strike is one clash between one hero and one enemy.</p>
+<h3>STATS USED</h3>
+<ul>
+<li>Clash attack and focus come from the played battle card (plus overlays such as Battlescar / temporary badges), not from the hero’s sheet Attack/Focus alone.</li>
+</ul>
+<h3>ROLLS</h3>
+<ul>
+<li>Hero and enemy each roll 1d100 (1–100) once per clash (unless skipped).</li>
+</ul>
+<h3>HIT</h3>
+<ul>
+<li>Hero hits if hero_roll ≥ (100 − hero clash focus). Example: Focus 70 → need 30+.</li>
+<li>Enemy hits if enemy_roll ≥ (100 − enemy clash focus).</li>
+<li>Focus ≤ 0 → that side auto-hits (no focus roll).</li>
+<li>Dice bonuses add to the hero’s d100 roll (+N).</li>
+</ul>
+<h3>DAMAGE</h3>
+<ul>
+<li>Each side that hits deals its full clash attack as damage.</li>
+<li>There is no “difference only” mutual-hit rule.</li>
+</ul>
+<h3>CRITICAL STRIKE (hero)</h3>
+<ul>
+<li>From the weapon card’s crit value N only. Roll ≥ (101 − N) is a crit (e.g. N=2 → 99 or 100). On crit hit: hero deals full attack (with crit bonus) and takes 0 damage from that clash.</li>
+</ul>
+<h3>CRITICAL STRIKE (enemy)</h3>
+<ul>
+<li><strong>Optional (run config). If enabled</strong>: enemy roll ≥ 96 (default) → enemy damage ×2 (default).</li>
+</ul>
+<h3>DIRECTIONAL ATTACKS (SWING)</h3>
+<ul>
+<li>Cards may show Up / Down / Left / Right, or be regular (no arrow).</li>
+<li>Enemies may show a next-attack arrow (or regular).</li>
+<li>Attack cards in hand show the clash attack total vs the targeted enemy’s next attack card (swing already included). Switching targets updates that number only. A swing-direction badge on the card shows +N or −N when Attack is adjusted (plus badge for cross, minus badge for head-on).</li>
+<li>Only these attack adjustments apply (default ±30% of hero attack):<ul><li><strong>Cross (perpendicular) directions</strong>: hero attack +30% for the clash.</li><li><strong>Head-on (opposite) directions</strong>: hero attack −30% for the clash.</li><li>Same direction, or either side regular: base Attack (no swing change).</li></ul></li>
+<li>Enemy attack is never changed by swing. There is no swing focus bonus.</li>
+</ul>
+<h3>DAMAGE APPLICATION</h3>
+<ul>
+<li>Applied immediately to current vitality. ≤0 → unit defeated.</li>
+<li>After each clash, enemies roll a new next-attack direction (or regular).</li>
+</ul>
+<h2>8. HEROES: STATS AND INVENTORY</h2>
+<h3>CORE STATS</h3>
+<ul>
+<li><strong>Vitality</strong> — hit points. Persists between rounds in a tournament.</li>
+<li><strong>Attack / Focus</strong> — sheet values inform presentation and some systems; clash resolution uses the played battle card’s attack/focus.</li>
+<li><strong>Range</strong> — prep movement in pawn squares.</li>
+<li><strong>Other</strong>: mining/search yield, deck draws, forge points, gems, etc.</li>
+</ul>
+<h3>INVENTORY (PER HERO)</h3>
+<ul>
+<li><strong>Battle hand</strong>: exactly 4 playable cards drawn from the deck loadout. Play any card; it is replaced from the next card in line, and the played card goes to the bottom of the loadout.</li>
+<li><strong>Deck loadout</strong>: starts at 5 slots (typically 4 Attack + 1 Block) and grows with Party Level up to 12. Stays full up to unlocked capacity. Arrange order outside battle only. Holding top can replace any unlocked loadout slot (displaced card returns to Holding top).</li>
+<li><strong>Holding</strong>: loot/rewards, shop purchases, and displaced loadout cards wait here until placed or sold. Shop → Sell sells Holding top only.</li>
+<li><strong>Stat Cards (tactical / active)</strong>: up to 4. Apply ongoing modifiers.</li>
+<li>Modifier slots: up to 4.</li>
+<li><strong>Extra</strong>: 2 inactive storage slots (no stat application).</li>
+</ul>
+<h3>CARD TYPES (PLAYER-FACING SUMMARY)</h3>
+<ul>
+<li>Attack / directional Attack (Up, Down, Left, Right)</li>
+<li>Block, Heal</li>
+<li><strong>Ability cards (examples)</strong>: Critical Strike, Hex, Stun, Curse, Salvage, Berserk, Force Field, Hide, Blind, Pierce, Retaliate, Cleanse, potions</li>
+<li><strong>Battlescar</strong> — penalty overlay on a deck card after a hero falls (all difficulties; unlocks at Zone 4 dungeons / Defend wave 8). That card whiffs in the next battle. Cannot be discarded; Salvage can clear it.</li>
+<li><strong>Cursed</strong> — cannot be discarded</li>
+</ul>
+<h3>DISCARD</h3>
+<ul>
+<li>Allowed only for cards that are not Battlescar and not Cursed.</li>
+<li>Battle-hand cards cannot be discarded mid-fight in a way that leaves an empty playable slot — the hand stays full of 4 via queue refill.</li>
+</ul>
+<h3>WEAPON SPECIALTIES (ON ATTACK CARDS)</h3>
+<ul>
+<li><strong>Splash Damage</strong> — splash to other enemies in the same room after a hit</li>
+<li><strong>Splash Heal</strong> — heal allies in the realm after a hit</li>
+<li><strong>Stun</strong> — opponent cards are Stunned this clash and the next (plays do nothing)</li>
+<li><strong>Freeze</strong> — target skips its next turn</li>
+<li><strong>Double Strike</strong> — second unopposed hit roll; on hit, full attack again</li>
+<li><strong>Double Damage</strong> — double damage to the main target on a successful hit</li>
+</ul>
+<h3>META VS TOURNAMENT (SIMPLE)</h3>
+<ul>
+<li><strong>Meta</strong>: survives tournament boundaries (base vitality floor, some long-term upgrades and save fields).</li>
+<li><strong>Tournament</strong>: resets when a new tournament begins (many sigil bonuses, gems, forge points, movement orbs, most in-run inventory bonuses).</li>
+</ul>
+<h2>9. ENEMIES</h2>
+<h3>RANKS</h3>
+<ul>
+<li>Families include Minion, Captain, Commander, General, Marshal, and Boss, with Elite variants. Stats and board move range scale with rank.</li>
+<li>Typical board move ranges (pawn squares): Minion 1–2, Captain 2–3, Commander 2–4, General/Boss 3–5, Marshal 4–6.</li>
+</ul>
+<h3>BOARD MOVEMENT STYLES</h3>
+<ul>
+<li><strong>Pursuit</strong> — path toward heroes.</li>
+<li><strong>Patrol</strong> — pair with the nearest other Patrol (any realm). Pairs move into a room next to a hero only when both can enter or leave together that round. A solo Patrol may travel freely to find a partner or stay about 2 rooms away from heroes.</li>
+<li><strong>Guard</strong> — move to the closest Forge, Shop, Home Floor, or Camp. Up to 2 Guards hold a room (shuffle inside, do not leave). When full, the next Guards fill one adjacent overflow room (also cap 2), then other Guard room types. A third Guard already in a full room leaves to retarget.</li>
+<li><strong>Seeker</strong> — path to sigils, void chests, and matching-realm loot bags. Useful combat buffs empower the enemy party (temp) or that Seeker (personal permanent); gems/tokens/score junk are destroyed.</li>
+</ul>
+<h3>UNKNOWN ENEMIES</h3>
+<ul>
+<li>Unlocks when the deepest opened barrier zone reaches Zone 4. New enemies may spawn with hidden identity (shared “Unknown” art). Chance starts at 10% and rises (+1% per further spawn, cap 80%).</li>
+<li><strong>While unknown</strong>: no line drops, no line-based board movement (forced Pursuit), identity badges redacted. Emotion rim still shows.</li>
+<li>First battle with a hero reveals identity permanently.</li>
+</ul>
+<h3>ZONE ENEMY LINES (territory scaling)</h3>
+<ul>
+<li>Deepest opened barrier zone unlocks minion lines cumulatively (Zone 2 is rank-only). Zone 1: Sentinel / Scavenger / Fungal / Shambler. Zone 3: Predator / Scorpion / Ent / Swarm. Zone 4: Golem / Wraith / Druid / Leviathon. Zone 5: Shaman / Vizier / Skulker / Hexer (full roster).</li>
+<li>Older-zone lines stay in the spawn pool after later zones open.</li>
+<li>Zone pressure (replaces some Enemy Pressure steps under territory scaling): Line ability / drop chance by deepest opened zone: Zone 1 0%, Zone 2 10%, Zone 3 15%, Zone 4 20%, Zone 5 25%. Zone 3 leftover +1 on unopened Spawners; Zone 4 +3 flat armor and, on Normal+, a 50% chance that a successful Spawner pulse summons a second enemy; Zone 5 armor +6 and leftover +2 total.</li>
+</ul>
+<p>ENEMY SPECIAL ABILITIES AND DROPS (Game Rules: “Enemy special abilities”)</p>
+<ul>
+<li>Gated by Game Rules (on at default chance for Normal+ presets that enable drops). Shared chance %: under territory scaling, by deepest opened zone (0/10/15/20/25); otherwise default 10% (cap 50%); Tester 50%. Captain+ ranks only, unless a Disciple / Malakor borrowed that special at spawn (see below).</li>
+<li>Line abilities (examples; chance on board-move / combat turns unless noted):<ul><li><strong>Wraith</strong> — Invisibility</li><li><strong>Shaman</strong> — Blink (teleport move)</li><li><strong>Shambler</strong> — Hidden Attack (battle cards face-down until played)</li><li><strong>Druid</strong> — Replicate</li><li><strong>Scavenger</strong> — Search (deterministic: lands on unsearched search-room squares and stashes finds; survivors claim stash on defeat)</li><li><strong>Leviathon</strong> — Darkness (board lighting blackout, then multi-round recover)</li><li><strong>Vizier</strong> — Room Swap</li><li><strong>Ent</strong> — Root Wall</li><li><strong>Predator</strong> — Stalking (hero-room lighting + hunt pressure)</li></ul></li>
+<li>Leave-square drops (Captain+ of that line; last 3 rounds):<ul><li><strong>Golem</strong> — Ice Block (blocks the square)</li><li><strong>Scorpion</strong> — Poison (−1 vitality at end of round if still on the square)</li><li><strong>Fungal</strong> — Spores (on land: −10 Attack for 3 rounds)</li><li><strong>Hexer</strong> — Blight (leaving the square: move range capped to 1)</li></ul></li>
+</ul>
+<h3>DISCIPLE / MALAKOR BOSS POOL</h3>
+<ul>
+<li>Realm Disciples and Malakor build decks from unlocked enemy specialties and line cards (12 cards). Each 4-card battle hand has at least 2 attacks (same enemy-hand rule as other foes). At spawn they may roll one borrowed line ability or drop (same specials chance %). That assignment auto-succeeds later chance rolls.</li>
+</ul>
+<h3>SPAWNING</h3>
+<ul>
+<li>New enemies appear during Invasion. Spawns must be within the party tether. Spawners and dungeon stairs can add more pressure when unlocked.</li>
+<li><strong>Enemies per Spawner (Game Rules)</strong>: Zone 1 starting pool each Spawner can produce (Easy 2, Normal 3, Hard 4, Nightmare 5). Each Spawner rolls 0 or 1 per pulse (50/50) until its pool is spent.</li>
+<li><strong>Zone Spawner bonuses (optional)</strong>: when on, Zone 3 adds Bonus enemies per zone once and Zone 5 adds it twice to Spawners that have not opened yet (Hard +1; Nightmare +2; Easy/Normal off). Already-open Spawners keep the pool they opened with. Zone 4+ (Enemies per Spawner 5+) also unlocks a 50% chance that a successful pulse summons a second enemy.</li>
+<li>Custom Enemy Pressure (LEGACY; removed from Game Rules, always off): old saves may still carry pressure leftover steps.</li>
+<li>Spawner delay (Explore; pressure frozen while counting down): Easy 10, Normal 6, Hard 3, Nightmare 0. Defend uses its own wave delay overlays (Easy 7, Normal 5, Hard 3, Nightmare 0).</li>
+<li>Surface Spawners in a sealed zone stay closed until that Barrier Room is cleared. After the gate opens they can scan and then spawn as usual.</li>
+</ul>
+<h3>OVERRUN (ENEMY CAP)</h3>
+<ul>
+<li>The board has an enemy cap (base 6; setup/unlocks can change it).</li>
+<li>If living enemies exceed the cap at round start, the party loses 1 life (no separate “board full” instant game over).</li>
+</ul>
+<h3>EMPOWERED / EMOTIONS (OPTIONAL)</h3>
+<ul>
+<li>When enabled, enemies that win clashes or sit unfought can gain annoyance / empowerment bonuses.</li>
+</ul>
+<h2>10. DESCENT CHRONICLE (META)</h2>
+<h3>WHAT IT IS</h3>
+<ul>
+<li><strong>Per save party</strong>: long-term collection of cards, enemies, rooms, and realm fragment puzzles. Open Descent Chronicle from the party / Void Lobby menus (and from the in-game menu when available).</li>
+<li><strong>Touch-to-show</strong>: a Chronicle entry only appears after you discover it. A brand-new party shows empty collection grids until you find things.</li>
+</ul>
+<h3>HOW DISCOVERIES HAPPEN</h3>
+<ul>
+<li><strong>Cards</strong> — use the card in battle (catalog match).</li>
+<li><strong>Enemies</strong> — battle that enemy type; bosses unlock when encountered.</li>
+<li><strong>Rooms</strong> — enter that room type on the board.</li>
+<li><strong>Realm fragments</strong> — recover puzzle pieces (search rooms, or Realm Rift deepest-floor sigils when rifts are active). Fragments are always on; there is no Game Rules toggle to disable them.</li>
+<li><strong>Glyphs</strong> — Disciple Glyph Quests award one of four realm glyphs (Frostfall / Dustveil / Everglade / Shadowfen). Glyphs are quest rewards only and are not Chronicle discoveries.</li>
+</ul>
+<h3>DESCENT SCORE AND CHRONICLE RANK</h3>
+<ul>
+<li>Descent Score feeds Chronicle Rank.</li>
+<li>Score = sum of your best scores across Void Lobby play options (every board size × difficulty cell, Explore and Defend where tracked) + 100 per Chronicle discovery unit.</li>
+<li><strong>Discovery units include</strong>: each card, enemy, room, and each collected fragment piece, plus an extra +100 Descent Score for each fragment piece that sits in its correct puzzle home slot.</li>
+<li>Moving a correctly placed piece out of its home slot loses that placement bonus until it is fixed again.</li>
+</ul>
+<h3>REALM FRAGMENT PUZZLES</h3>
+<ul>
+<li>Four realm tabs (Frostfall, Dustveil, Everglade, Shadowfen), one 10×6 grid each. Newly discovered pieces land in a random off-home slot (scrambled). Swap pieces to assemble the picture.</li>
+<li>Puzzle moves (shared across all realms):<ul><li>+5 moves when you discover a fragment piece.</li><li><strong>Spending</strong>: 1 move per swap on any realm grid.</li><li>If every fragment piece is already collected but not every realm puzzle is solved, each won game grants +5 more moves.</li></ul></li>
+<li>There is no Hint button; moves only let you swap pieces.</li>
+<li>Completing a realm puzzle marks that realm Recovered (avatar / tab).</li>
+</ul>
+<h3>REALM RIFTS (EXPLORE RUNS)</h3>
+<ul>
+<li>When active, Surface search does not yield fragments. Side-quest rift stairs use the same locked-door / realm-key pattern as disciple stairs. Clear all dungeon floors, collect the fragment from the deepest Summon Room, then return to the Surface scroll to seal (+ Journey Points). See §12.</li>
+</ul>
+<h2>11. BARRIER RUNES (SURFACE)</h2>
+<ul>
+<li><strong>Always on. Surface Barrier Rooms only</strong> — never on dungeon / Hidden Chamber / Malakor boards. Small has 0 seals (Zone 1 only).</li>
+<li><strong>World-size seal count</strong>: Medium 1, Large 2, Massive 3, Colossal 4. Each seal opens the next zone. Outer half of a Barrier Room (Home side) is enterable; the inner branch stays sealed until cleared.</li>
+<li>Each zone has 1 quest dungeon (Colossal may place a second if the pocket fits). Hidden Chambers spawn in the same zone as their stair.</li>
+<li>Completing every disciple / rift quest in the current zone (not Malakor) grants the next-zone Barrier Rune to the matching-realm hero (Frostfall → Hasmere, Dustveil → Soren, Everglade → Elowen, Shadowfen → Mordane). A dialog and Surface quest line tell you to move that hero into the matching Barrier Room. The holder shows a left-side badge. Land that hero in the Barrier Room to clear the seal for everyone. Small and the last zone have no next-zone rune. Dungeon Search does not yield Barrier Runes.</li>
+<li>After a seal opens, enemies from that zone may roam into earlier zones. Home Spawners still produce Minions. New minion lines unlock with the deepest opened zone (see ZONE ENEMY LINES). Spawners in a sealed zone stay closed until that gate opens.</li>
+</ul>
+<h2>12. DUNGEONS, QUESTS, AND MALAKOR</h2>
+<h3>LOCKED STAIRS AND KEYS</h3>
+<ul>
+<li>Disciple stairs and Realm Rift stairs start locked. Each locked stair has a realm key found in a Hidden Chamber (not buried in Surface search while Hidden Chambers are active).</li>
+<li>Matching-realm hero collects the key; wrong realm gets a notice.</li>
+</ul>
+<h3>HIDDEN CHAMBERS</h3>
+<ul>
+<li>One chamber per locked stair, in the same zone as that stair. Entrance = a nearby search room. Digging that room’s last unsearched pawn square reveals the entrance.</li>
+<li><strong>Enter / exit</strong>: whole party on distinct pawn squares in the entrance/exit room. Chambers are small side boards (key sigil for the matching realm; optional loot). Quest tracker stays hidden inside chambers.</li>
+</ul>
+<h3>QUEST TRACKER (TOP BAR)</h3>
+<ul>
+<li>Side quests (rift / disciple glyph): tracker shows only while inside that quest’s dungeon, except delivery (glyph to the Surface scroll, fragment to the Surface rift) which stays on Surface until turned in. Pre-quest steps (Find the Key / unlock / descend) are not tracker lines. Glyph quests count four steps (clear enemies, defeat the Disciple and guards, retrieve the glyph at the Summon Room, deliver it to the Surface scroll). Rift quests count three (clear enemies, retrieve the fragment at the Summon Room, deliver it to the Surface rift). Briefings at stairs / Boss Gate are informational; the first land-in-room briefing awards +50 Journey Points (double-click reopen does not).</li>
+<li><strong>Barrier Rune (Surface)</strong>: after the last quest in a zone, the matching-realm hero is granted the rune. Tracker: “Hasmere: move to the Frostfall Barrier Room.” (name and realm follow the holder). Clears when the Barrier Room opens.</li>
+<li>Malakor may show on Surface when artifacts and side quests are done (those steps are pre-tracker). Lines: Descend, then Clear the Lair. Double-click the Malakor Scroll (or land on the Boss Gate) for a checklist of remaining artifacts and unfinished side quests.</li>
+</ul>
+<h3>DISCIPLE GLYPH QUESTS</h3>
+<ul>
+<li>Surface scroll at a disciple stair. Task: key → unlock → dungeon → defeat the named Disciple → collect the glyph from the Summon Room → return to the Surface scroll for Journey Points reward.</li>
+<li>After glyph collect, Summon Room becomes a Surface Staircase (party gather returns straight to Surface).</li>
+</ul>
+<h3>REALM RIFT SIDE QUESTS (EXPLORE)</h3>
+<ul>
+<li>Same lock/key/chamber pattern. Fragment appears at the Summon Room only after every floor of that dungeon is enemy-cleared. Seal on Surface return.</li>
+<li><strong>Depth</strong>: Game Rules “Dungeon levels (up to)” by world size (Small/Medium 1, Large 2, Massive 3, Colossal 4); each dungeon may roll one fewer floor (min 1).</li>
+</ul>
+<h3>DEFEND WAVES (EQUAL PLAY STYLE)</h3>
+<ul>
+<li>Fixed Small arena with a center vortex. Enemies path to the vortex (range 1). Reaching the vortex despawns that enemy, costs 1 party life, and counts toward wave clear.</li>
+<li><strong>Wave N quota</strong>: regulars from open Spawners, then a delayed disciple + guards pack. Clear all living wave enemies for Wave Complete rewards: Journey Points 200+(N−1)×50, gems 5+(N−1), forge tokens 5+(N−1), +1 party life. Between waves, rooms reshuffle and living heroes re-summon at the vortex pads.</li>
+<li>Searching does not yield realm fragments in Defend. Party tether and Range boosts use Defend difficulty overlays (see §15).</li>
+</ul>
+<h3>SUMMON ROOM FINALES</h3>
+<ul>
+<li>After a full clear of a disciple / Malakor dungeon, the boss and 3 high-tier guards spawn in the Summon Room for the finale fight.</li>
+</ul>
+<h3>SPAWNER ARTIFACTS (ALWAYS ON)</h3>
+<ul>
+<li>When a Spawner’s residual is spent and every enemy it spawned is dead, an artifact sigil appears in that empty Spawner room. Any hero may recover (+50 Journey Points per artifact collected).</li>
+<li>Top bar shows Artifact recovered/required. Required scales with board size Spawner quota plus every quest dungeon floor (disciple and Realm Rift) × 3.</li>
+<li>Malakor’s Boss Gate unlocks when all required Spawner artifacts are recovered and every assigned side quest is complete; then the full party gathers at the gate (vortex art) to descend.</li>
+<li>In Malakor’s Lair, cleared Spawners award Journey Points instead of artifacts (same Journey Point roll as a void chest score: 20 + 50/100/200).</li>
+<li>Malakor Scroll proximity-spawns at the Boss Gate (sticky). Defeat Malakor (and clear living enemies) to win the tournament.</li>
+</ul>
+<h2>13. HAZARDS AND PICKUPS</h2>
+<h3>VOID CRACK</h3>
+<ul>
+<li>Occupies a room; typically appears from round 2+. Lasts 6 rounds if not cleared, then expires.</li>
+<li>Crossing/landing applies void injury (~25% of base max vitality) until after the next battle. Landing clears the crack. Range stops at the crack.</li>
+</ul>
+<h3>VOID PROTECTION / VOID FRUIT</h3>
+<ul>
+<li>Retired. Not used in current runs.</li>
+</ul>
+<h3>CRYSTALS</h3>
+<ul>
+<li>Block a single pawn square. Can appear from round 2+ (&quot;Crystals Rise&quot;).</li>
+</ul>
+<h3>ORB / CARD PEDESTAL</h3>
+<ul>
+<li>Land to collect. Orbs grant permanent orb buffs; card pedestals grant a tier-1 card to Holding. Typically last 6 rounds if uncollected.</li>
+</ul>
+<h3>SIGILS / LOOTERS / CHESTS</h3>
+<ul>
+<li>Board collectibles (stats, party lives, forge/gem bonuses, keys, glyphs, void chests, loot bags, Spawner artifacts). Many expire after a few rounds if ignored (artifacts stay until recovered).</li>
+<li><strong>Round 1</strong>: no open-board round looter/crystal wave. Round 2+: expire old items, then new hazards/pickups can appear.</li>
+</ul>
+<h3>ENEMY DROPS</h3>
+<ul>
+<li>Ice Block / Poison / Spores / Blight left by Captain+ lines (see §9).</li>
+</ul>
+<h2>14. BUILD A LABYRINTH (COMING SOON)</h2>
+<ul>
+<li>Not offered in Void Lobby Play Style today. Explore and Defend use authored / procedural boards. When Build ships, Prep will gain a Build action to place rooms from a shared room deck onto a Home-started maze.</li>
+<li>Until then, ignore Build toggles in old saves.</li>
+</ul>
+<h2>15. OPTIONAL / SETUP RULES (VOID LOBBY GAME RULES)</h2>
+<p>Difficulty presets and Game Rules in Void Lobby change a run. Meaningful examples:</p>
+<ul>
+<li><strong>party_lives</strong> — starting lives (Explore Easy 7 / Normal 5 / Hard 5 / Nightmare 3; Defend overlays start at 4)</li>
+<li><strong>enemy_overrun_enabled / max_enemies_on_board</strong> — enemy cap and life drain</li>
+<li><strong>enemy_pressure_active</strong> — LEGACY (removed from Game Rules); always off. Zone pressure under territory scaling owns ranks, lines, leftover, armor, double-pulse, specials %, and Unknown Enemies</li>
+<li><strong>battlescars_active</strong> — Battlescars when heroes fall (on by default for all difficulties; unlock beat 8 = Defend wave 8 / Explore Zone 4 dungeons). Overlay makes one deck card whiff for the fallen hero’s next battle, then clears.</li>
+<li><strong>search_affliction_enabled</strong> — Search Affliction overlays (master OFF + beat 2)</li>
+<li><strong>specialty_cards_enabled</strong> — Enemy specialty deck cards (master OFF + beat 5)</li>
+<li><strong>runners_enabled</strong> — Runner / Sprinter spawns (master OFF + beats 4 / 9)</li>
+<li><strong>unknown_enemies_enabled</strong> — Unknown Enemy faces (master OFF + beat 7)</li>
+<li><strong>enemy_can_crit / crit_enabled</strong> — enemy / hero crit gates</li>
+<li><strong>attack_swing_enabled</strong> — directional swing combat</li>
+<li><strong>enemy_empowered / enemy_emotions</strong> — empowerment / annoyance</li>
+<li><strong>enemy_drops_enabled</strong> — Enemy special abilities (line abilities + drops)</li>
+<li><strong>enemy_drop_spawn_percent</strong> — Enemy Special Ability Chance % (default 10)</li>
+<li><strong>dungeons_enabled</strong> — disciple stairs (always on)</li>
+<li><strong>locked_dungeons_enabled</strong> — always on; locked stairs + Hidden Chambers</li>
+<li><strong>spawners_active_in_rounds / spawner_enemies</strong> — Spawner delay / Enemies per Spawner</li>
+<li><strong>spawner_zone_bonuses_enabled / spawner_zone_bonus</strong> — Zone Spawner bonuses / Bonus enemies per zone</li>
+<li><strong>party_range_increase</strong> — Range boost (flat prep range for all heroes)</li>
+<li><strong>starting_bonus</strong> — start with gems / forge tokens</li>
+<li><strong>tiered_shop</strong> — always on; shop tiers unlock by party level</li>
+<li><strong>build_labyrinth (+ build limits / build range)</strong> — Coming Soon (§14); ignored</li>
+<li><strong>restricted_resting</strong> — Rest only on Home/Camp/Forge/Shop/own-realm search</li>
+<li><strong>glyphs_enabled</strong> — legacy save flag (always on); quest glyphs are not Chronicle discoveries</li>
+<li><strong>sparse_rooms</strong> — Game Rules; blank Empty Floor fillers after minimums</li>
+<li><strong>floor_* toggles</strong> — which special floors appear</li>
+<li>void_crack and other hazard / cove / surround toggles</li>
+<li><strong>Dungeon levels (up to)</strong> — max floors per dungeon by world size</li>
+<li><strong>arena_tournament / Defend</strong> — Play Style flag; applies Defend difficulty overlays</li>
+</ul>
+<p>Always on (no meaningful OFF for current builds): realm fragments, Spawner artifacts, locked dungeons / disciple stairs, Barrier Rooms (Explore count by world size: Small 0, Medium 1, Large 2, Massive 3, Colossal 4). Legacy void protection is off.</p>
+<h2>16. QUICK REFERENCE</h2>
+<p>Entry:           Create Party / Saved Parties → Void Lobby Play Style:      Explore (labyrinth) or Defend (wave arena) — equal peers Party lives:     by difficulty + Play Style; lose 1 on hero defeat, Explore overrun (if on), or Defend vortex leak Overrun:         Explore: living enemies &gt; board cap → −1 life at round start Hero move:       start 2–3 by class/hero; void crack blocks range past crack Enemy move:      Explore by rank/style; Defend path to vortex (range 1) Max pawns:       4 per room Party tether:    difficulty / Play Style room count between every pair Battles:         room with ≥1 hero and ≥1 enemy after movement Battle hand:     exactly 4; replace only; ≤1 Heal, ≤1 Block Holding:         loot / shop staging; sell Holding top only Hit:             d100 ≤ clash focus (focus ≤ 0 = auto-hit) Mutual hit:      full damage each side Hero crit:       card crit N; roll ≥ (101−N) → full damage, 0 to hero Enemy crit:      if enabled, roll ≥ 96 → ×2 damage Swing:           cross → hero atk +30%; head-on → hero atk −30% Vitality:        persists between rounds; defeated heroes restore on respawn Barriers:        Explore — finish zone quests → rune → Barrier Room Keys:            Hidden Chamber key → unlock disciple / rift stairs Malakor:         Explore — all Spawner artifacts + side quests → Boss Gate Win Explore:     clear living enemies + defeat Malakor Defend:          clear waves; Journey Points; leaks cost lives Lose:            party lives = 0 Chronicle:       touch-to-show discoveries; Descent Score = play-option highs + 100×(discoveries + correctly placed fragments) Puzzle moves:    +5 per fragment found; 1 per grid swap; +5 per win when all pieces found but puzzles unfinished</p>
+</article>
+		</div>
+	</main>
+
+
+	<footer class="site-footer">
+		<nav aria-label="Footer">
+			<a href="index.html">Home</a>
+			<a href="how-to-play.html">How to Play</a>
+			<a href="quickstart.html">Quickstart</a>
+			<a href="rulebook.html">Rulebook</a>
+			<a href="hints.html">Hints</a>
+			<a href="updates.html">Updates</a>
+			<a href="about.html">About</a>
+		</nav>
+		<p>Thalenor's Descent — Tournament of Heroes</p>
+	</footer>
+
+</body>
+</html>
