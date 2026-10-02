@@ -487,7 +487,7 @@ def make_page(
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{html.escape(title)}</title>
 	<meta name="description" content="{html.escape(desc)}">
-	<link rel="icon" href="assets/images/small-capsule.png" type="image/png">
+	<link rel="icon" href="assets/images/icon.png" type="image/png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
