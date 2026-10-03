@@ -469,6 +469,52 @@ p {
 	border-radius: 0;
 }
 
+.company-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.company-card {
+	margin: 0;
+	overflow: hidden;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--bg-elevated);
+	box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+
+.company-card img {
+	width: 100%;
+	aspect-ratio: 2 / 3;
+	object-fit: cover;
+	object-position: center top;
+	background: #1a1510;
+	border-radius: 0;
+}
+
+.company-card figcaption {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	padding: 0.85rem 1rem 1rem;
+}
+
+.company-card__realm {
+	color: var(--gold);
+	font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.company-card__class {
+	color: var(--ink);
+	font-size: clamp(1.15rem, 2vw, 1.35rem);
+}
+
 .shot-grid {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -759,6 +805,10 @@ p {
 
 	.shot-grid {
 		grid-template-columns: 1fr 1fr;
+	}
+
+	.company-grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
 	.gallery__grid {
